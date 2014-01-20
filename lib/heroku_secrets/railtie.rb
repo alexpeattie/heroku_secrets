@@ -9,5 +9,9 @@ module HerokuSecrets
     rake_tasks do
       load "heroku_secrets/tasks.rake"
     end
+
+    config.to_prepare do
+      Rails.application.reload_secrets!
+    end
   end
 end

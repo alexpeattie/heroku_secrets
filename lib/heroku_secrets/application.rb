@@ -18,6 +18,11 @@ module HerokuSecrets
             secrets
           end
         end
+
+        def reload_secrets!
+          @secrets = nil
+          secrets
+        end
       end
 
     end
