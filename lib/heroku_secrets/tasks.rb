@@ -8,8 +8,6 @@ module HerokuSecrets
         output = heroku("config:set #{vars}")
 
         puts output.split("\n").first
-        heroku("run rake heroku:reload_secrets")
-        heroku("restart")
       end
 
       def environment
