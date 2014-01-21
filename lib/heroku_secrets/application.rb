@@ -6,7 +6,7 @@ module HerokuSecrets
         alias_method(:secrets_from_yaml, :secrets)
 
         def secrets
-          return if @secrets && @secrets.secret_key_base
+          return @secrets if @secrets && @secrets.secret_key_base
           @secrets = begin
             secrets = secrets_from_yaml
 
