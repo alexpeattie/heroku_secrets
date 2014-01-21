@@ -12,4 +12,9 @@ namespace :heroku do
       fail "Error: timeout connecting to Heroku. Ensure you've logged in with `heroku login`."
     end
   end
+
+  desc "Reload the secrets from the ENV variables"
+  task :reload_secrets => :environment do
+    Rails.application.reload_secrets!
+  end
 end
