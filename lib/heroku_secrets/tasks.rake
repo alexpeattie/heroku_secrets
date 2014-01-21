@@ -5,7 +5,7 @@ namespace :heroku do
   desc "Configure Heroku according to secrets.yml"
   task :secrets, [:app] => :environment do |_, args|
     begin
-      Timeout::timeout(10) {
+      Timeout::timeout(20) {
         HerokuSecrets::Tasks::Heroku.new(args[:app]).invoke
       }
     rescue Timeout::Error
