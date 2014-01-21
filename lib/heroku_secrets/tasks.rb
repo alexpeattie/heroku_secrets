@@ -4,7 +4,7 @@ module HerokuSecrets
   module Tasks
     class Heroku < Struct.new(:app)
       def invoke
-        Rails.env = environment || 'production'
+        # Rails.env = environment || 'production'
         output = heroku("config:set #{vars}")
 
         puts output.split("\n").first
