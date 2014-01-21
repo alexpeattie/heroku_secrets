@@ -11,7 +11,9 @@ module HerokuSecrets
     end
 
     config.to_prepare do
-      Rails.application.reload_secrets!
+      if Rails.application.respond_to? :reload_secrets!
+        Rails.application.reload_secrets!
+      end
     end
   end
 end
