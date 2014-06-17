@@ -18,8 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To push secrets to Heroku in Rails:
 
+```sh
+bin/rake heroku:secrets RAILS_ENV=production
+```
 ## Contributing
 
 1. Fork it
