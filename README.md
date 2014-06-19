@@ -23,6 +23,13 @@ To push secrets to Heroku in Rails:
 ```sh
 bin/rake heroku:secrets RAILS_ENV=production
 ```
+
+To push secrets to Heroku when you need to specify the app:
+
+```sh
+bin/rake heroku:secrets\[nameofyourapponheroku\] RAILS_ENV=production
+```
+
 ## Contributing
 
 1. Fork it
