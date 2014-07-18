@@ -18,11 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-To push secrets to Heroku in Rails:
+First replace the `<%= ENV["SECRET_KEY_BASE"] %>` value in the productions part of your secrets.yml file with the 'SECRET_KEY_BASE' from heroku which you can get by using the command `heroku config`
+
+Then to push secrets to Heroku in Rails:
 
 ```sh
 bin/rake heroku:secrets RAILS_ENV=production
 ```
+
+
 ## Contributing
 
 1. Fork it
