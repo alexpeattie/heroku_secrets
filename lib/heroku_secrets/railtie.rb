@@ -2,7 +2,7 @@ require "rails"
 
 module HerokuSecrets
   class Railtie < ::Rails::Railtie
-    config.before_initialize do |app|
+    config.before_configuration do |app|
       app.class.send(:include, HerokuSecrets::Application)
       app.reload_secrets!
     end
