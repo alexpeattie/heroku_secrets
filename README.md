@@ -1,12 +1,12 @@
 # HerokuSecrets
 
-TODO: Write a gem description
+A gem that sets the secret_key_base in the config/secrets.yml file securely when pushing to Heroku, without including the secrets.yml file on GitHub.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'heroku_secrets'
+    gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
 And then execute:
 
@@ -21,7 +21,7 @@ Or install it yourself as:
 To push secrets to Heroku in Rails:
 
 ```sh
-bin/rake heroku:secrets RAILS_ENV=production
+bin/rake heroku:secrets[app-name] RAILS_ENV=production
 ```
 ## Contributing
 
